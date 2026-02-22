@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/db";
-import { auth } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
@@ -24,7 +24,37 @@ export async function GET(request: NextRequest) {
         })
 
         if (!user) {
-            return NextResponse.json({ error: 'User not found' }, { status: 404 })
+            const clerkUser = await currentUser()
+            if (!clerkUser) {
+                return NextResponse.json({ error: 'User not found' }, { status: 404 })
+            }
+
+            const primaryEmail = clerkUser.emailAddresses?.find(
+                (email) => email.id === clerkUser.primaryEmailAddressId
+            )?.emailAddress
+
+            const created = await prisma.user.upsert({
+                where: { id: clerkUser.id },
+                create: {
+                    id: clerkUser.id,
+                    clerkId: clerkUser.id,
+                    email: primaryEmail || null,
+                    name: `${clerkUser.firstName ?? ''} ${clerkUser.lastName ?? ''}`.trim()
+                },
+                update: {
+                    email: primaryEmail || null,
+                    name: `${clerkUser.firstName ?? ''} ${clerkUser.lastName ?? ''}`.trim()
+                },
+                select: {
+                    currentPlan: true,
+                    subscriptionStatus: true,
+                    meetingsThisMonth: true,
+                    chatMessagesToday: true,
+                    billingPeriodStart: true,
+                }
+            })
+
+            return NextResponse.json(created)
         }
         return NextResponse.json(user)
     } catch (error) {

@@ -13,7 +13,7 @@
             },
             {
                 "end": 2.105,
-                "word": "Gowreesh,",
+                "word": "Sudheer,",
                 "start": 1.685
             },
             {
@@ -158,7 +158,7 @@
             }
         ],
         "offset": 1.245,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -174,7 +174,7 @@
             },
             {
                 "end": 8.805,
-                "word": "Rachel,",
+                "word": "Bhargav,",
                 "start": 8.585
             },
             {
@@ -409,7 +409,7 @@
             }
         ],
         "offset": 8.145,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -690,7 +690,7 @@
             }
         ],
         "offset": 17.065,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -926,7 +926,7 @@
             }
         ],
         "offset": 27.225,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -1117,7 +1117,7 @@
             },
             {
                 "end": 41.325,
-                "word": "Gowreesh",
+                "word": "Sudheer",
                 "start": 41.165
             },
             {
@@ -1207,7 +1207,7 @@
             }
         ],
         "offset": 34.805,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -1428,7 +1428,7 @@
             }
         ],
         "offset": 44.745,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -1774,7 +1774,7 @@
             }
         ],
         "offset": 51.565,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -2005,7 +2005,7 @@
             }
         ],
         "offset": 62.045,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -2281,7 +2281,7 @@
             }
         ],
         "offset": 69.305,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -2307,7 +2307,7 @@
             },
             {
                 "end": 79.205,
-                "word": "Rachel.",
+                "word": "Bhargav.",
                 "start": 79.085
             },
             {
@@ -2527,7 +2527,7 @@
             }
         ],
         "offset": 78.205,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -2758,7 +2758,7 @@
             }
         ],
         "offset": 86.065,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -3154,7 +3154,7 @@
             }
         ],
         "offset": 93.245,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -3240,7 +3240,7 @@
             }
         ],
         "offset": 105.305,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -3346,7 +3346,7 @@
             }
         ],
         "offset": 108.265,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -3462,7 +3462,7 @@
             }
         ],
         "offset": 111.785,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -3668,7 +3668,7 @@
             }
         ],
         "offset": 115.825,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     },
     {
         "words": [
@@ -3809,12 +3809,12 @@
             },
             {
                 "end": 126.565,
-                "word": "Gowreesh.",
+                "word": "Sudheer.",
                 "start": 126.385
             }
         ],
         "offset": 122.205,
-        "speaker": "Rachel"
+        "speaker": "Bhargav"
     },
     {
         "words": [
@@ -3840,7 +3840,7 @@
             },
             {
                 "end": 127.885,
-                "word": "Rachel.",
+                "word": "Bhargav.",
                 "start": 127.765
             },
             {
@@ -3945,6 +3945,6 @@
             }
         ],
         "offset": 127.145,
-        "speaker": "Gowreesh Simhadri"
+        "speaker": "Sudheer Simhadri"
     }
 ]

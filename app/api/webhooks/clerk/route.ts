@@ -30,16 +30,21 @@ export async function POST(request: NextRequest) {
                 email.id === event.data.primary_email_address_id
             )?.email_address
 
-            const newUser = await prisma.user.create({
-                data: {
-                    id: id,
+            const newUser = await prisma.user.upsert({
+                where: { id },
+                create: {
+                    id,
                     clerkId: id,
                     email: primaryEmail || null,
-                    name: `${first_name} ${last_name}`
+                    name: `${first_name} ${last_name}`.trim()
+                },
+                update: {
+                    email: primaryEmail || null,
+                    name: `${first_name} ${last_name}`.trim()
                 }
             })
-            console.log('user created', newUser.id, newUser.email)
-            return NextResponse.json({ message: "user created successfully" })
+            console.log('user upserted', newUser.id, newUser.email)
+            return NextResponse.json({ message: "user upserted successfully" })
         }
 
         return NextResponse.json({ message: 'webhook received' })

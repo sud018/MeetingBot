@@ -164,9 +164,9 @@ function getPlanFromSubscription(subscription: Stripe.Subscription) {
     const priceId = subscription.items.data[0]?.price.id
 
     const priceToPlank: Record<string, string> = {
-        'price_1RpqPqPM25qIcCJyMdRhoNah': 'starter',
-        'price_1RpqPqPM25qIcCJyWkSDTdKN': 'pro',
-        'price_1RpqPqPM25qIcCJyXD9K1yKM': 'premium'
+        'price_1T3OqzPvKWrNfnVjNkrTu2OY': 'starter',
+        'price_1T3OqzPvKWrNfnVjmpgFxsU7': 'pro',
+        'price_1T3OqzPvKWrNfnVjAo64Nvdp': 'premium'
     }
 
     return priceToPlank[priceId] || 'invalid'

@@ -28,17 +28,34 @@ export async function GET() {
             take: 10
         })
 
-        const events = upcomingMeetings.map(meeting => ({
+        const events = upcomingMeetings.map(meeting => {
+            let attendees: any[] = []
+            if (meeting.attendees) {
+                if (typeof meeting.attendees === "string") {
+                    try {
+                        attendees = JSON.parse(meeting.attendees)
+                    } catch {
+                        attendees = []
+                    }
+                } else if (Array.isArray(meeting.attendees)) {
+                    attendees = meeting.attendees
+                } else {
+                    attendees = [meeting.attendees]
+                }
+            }
+
+            return ({
             id: meeting.calendarEventId || meeting.id,
             summary: meeting.title,
             start: { dateTime: meeting.startTime.toISOString() },
             end: { dateTime: meeting.endTime.toISOString() },
-            attendees: meeting.attendees ? JSON.parse(meeting.attendees as string) : [],
+            attendees,
             hangoutLink: meeting.meetingUrl,
             conferenceData: meeting.meetingUrl ? { entryPoints: [{ uri: meeting.meetingUrl }] } : null,
             botScheduled: meeting.botScheduled,
             meetingId: meeting.id
-        }))
+        })
+        })
 
         return NextResponse.json({
             events,
